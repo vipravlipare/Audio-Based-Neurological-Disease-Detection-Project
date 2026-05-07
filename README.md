@@ -1,5 +1,7 @@
 # Audio Disease Detection Project
 
+This project was completed as part of a machine learning and biomedical audio analysis final project.
+
 This repository contains a machine learning project for speech-based detection of Dementia, Dysarthria, and Parkinson?s disease using audio features, transcript-aware dementia modeling, and real-time `.wav` file prediction.
 
 ## Project Structure
@@ -16,6 +18,23 @@ This repository contains a machine learning project for speech-based detection o
   - `run_real_time_detection_all_data.py`
 - `transcribe_folder.py`
 - `Final Project Report - Viprav Lipare.pdf`
+
+## Installation
+
+Create a Python environment and install the required packages:
+
+```powershell
+pip install -r requirements.txt
+```
+Main libraries used:
+- numpy
+- pandas
+- librosa
+- scikit-learn
+- matplotlib
+- whisper
+- torch
+- transformers
 
 ## Data Layout
 The project expects the main data under:
@@ -93,3 +112,9 @@ This saves:
 - Dementia is handled differently from the other disorders because transcript meaning matters more.
 - Parkinson?s and Dysarthria are primarily audio-first models.
 - Predictions below 80% confidence are flagged as failed confidence checks.
+
+## Dataset Note
+
+Some datasets used in this project are large and may not be fully included in the repository due to GitHub and Git LFS storage limitations.
+The project expects the datasets to follow the folder structure shown below.
+- The additional MDVR-KCL Parkinson’s speech dataset used for the extra classification and regression experiments was too large to fully include in the repository and can be downloaded from: https://zenodo.org/records/2867216
